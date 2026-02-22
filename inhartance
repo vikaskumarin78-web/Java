@@ -1,0 +1,50 @@
+public class Person {
+    protected String name;
+    protected int age;
+
+    public Person(String name,int age) {
+     this.name = name;
+     this.age  = age;
+
+    }
+    public boolean isAdult(){
+        return age>=18;
+    }
+
+    public String getName(){
+        return name;
+    }
+}
+
+public class Student extends Person {
+
+    private final int rollNumber;
+
+    public Student(String name, int age, int rollNumber) {
+        super(name, age);   // calling parent constructor
+        this.rollNumber = rollNumber;
+    }
+
+    public void displayInfo() {
+        System.out.println("Name: " + name);
+        System.out.println("Age: " + age);
+        System.out.println("Roll Number: " + rollNumber);
+    }
+}
+
+
+public class Main {
+    public static void main(String[] args) {
+
+
+        Student s1 = new Student("Vikas", 25, 101);
+        Student s2 = new Student("Tanu", 22, 20);
+
+        s1.displayInfo();
+        System.out.println("Is adult? " + s1.isAdult());
+
+        s2.displayInfo();
+        System.out.println("Is adult? " + s2.isAdult());
+
+    }
+}
