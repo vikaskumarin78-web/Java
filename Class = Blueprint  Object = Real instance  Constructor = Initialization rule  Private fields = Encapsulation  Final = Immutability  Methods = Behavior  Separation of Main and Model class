@@ -1,0 +1,47 @@
+public class Student {
+
+    private final String name;
+    private final int age;
+    private final int rollNumber;
+
+    public Student(String name, int age, int rollNumber) {
+        this.name = name;
+        this.age = age;
+        this.rollNumber = rollNumber;
+    }
+
+    boolean isAdult() {
+        return age >= 18;
+    }
+    String getName() {
+        return name;
+    }
+
+    void displayInfo() {
+        System.out.println("Name: " + name);
+        System.out.println("Age: " + age);
+        System.out.println("Roll Number: " + rollNumber);
+    }
+}
+
+
+public class Main {
+    public static void main(String[] args) {
+
+
+        Student s1 = new Student("Vikas", 25, 101);
+        Student s2 = new Student("Tanu", 22, 20);
+        Student s3 = new Student("Sakshi", 19, 23);
+
+
+        s1.displayInfo();
+        s2.displayInfo();
+        s3.displayInfo();
+
+
+        System.out.println("Is " + s1.getName() + " adult? " + s1.isAdult());
+        System.out.println("Is " + s2.getName() + " adult? " + s2.isAdult());
+        System.out.println("Is " + s3.getName() + " adult? " + s3.isAdult());
+
+    }
+}
