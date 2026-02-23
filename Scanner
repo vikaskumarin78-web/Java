@@ -1,15 +1,18 @@
 import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
-        
+
         Scanner sc = new Scanner(System.in);
-        System.out.print("Enter a number: ");
+        System.out.print("Enter a number: ");  
         int num = sc.nextInt();
+        
+        //loop
         int a =1;
         while (a<=10){
             System.out.println(num + " x "+a+" = "+ (num*a));
             a++;
         }
+        //table
         int count=0;
         for ( int i =1; i <=100; i++){
             if (i % num == 0) {count++;
@@ -17,5 +20,5 @@ public class Main {
         }
         System.out.println("Their are "+ count +" number is bivided by " + num);
 
-       }
+    }
 }
